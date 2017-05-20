@@ -20,10 +20,10 @@ export class FileItem {
   public index:number = void 0;
   public _xhr:XMLHttpRequest;
   public _form:any;
-
+  public options:FileUploaderOptions;
+  
   protected uploader:FileUploader;
   protected some:File;
-  protected options:FileUploaderOptions;
 
   public constructor(uploader:FileUploader, some:File, options:FileUploaderOptions) {
     this.uploader = uploader;
