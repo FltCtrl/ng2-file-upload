@@ -352,9 +352,9 @@ var FileUploader = (function () {
             sendable = new FormData();
             this._onBuildItemForm(item, sendable);
             sendable.append(item.alias, item._file, item.file.name);
-            if (this.options.additionalParameter !== undefined) {
-                Object.keys(this.options.additionalParameter).forEach(function (key) {
-                    sendable.append(key, _this.options.additionalParameter[key]);
+            if (item.options.additionalParameter !== undefined) {
+                Object.keys(item.options.additionalParameter).forEach(function (key) {
+                    sendable.append(key, item.options.additionalParameter[key]);
                 });
             }
         }

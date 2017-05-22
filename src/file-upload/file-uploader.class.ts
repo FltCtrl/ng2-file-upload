@@ -309,9 +309,9 @@ export class FileUploader {
 
       sendable.append(item.alias, item._file, item.file.name);
 
-      if (this.options.additionalParameter !== undefined) {
-        Object.keys(this.options.additionalParameter).forEach((key:string) => {
-          sendable.append(key, this.options.additionalParameter[key]);
+      if (item.options.additionalParameter !== undefined) {
+        Object.keys(item.options.additionalParameter).forEach((key:string) => {
+          sendable.append(key, item.options.additionalParameter[key]);
         });
       }
     } else {
